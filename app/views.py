@@ -3,11 +3,11 @@ import urllib.request
 import json
 
 def index(request):
-    data = {}  # Initialize data to an empty dictionary
+    data = {}  
     
     if request.method == 'POST':
         city = request.POST.get('city', None)
-        if city:  # Check if city is provided
+        if city:  
             try:
                 source = urllib.request.urlopen(
                     'http://api.openweathermap.org/data/2.5/weather?q=' + city + '&units=metric&appid=3cfdf49e5e7fc57bba074e46d6bcda7d'
